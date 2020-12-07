@@ -3,6 +3,8 @@ package com.example.tabunganemas.models;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Dao;
 import androidx.room.PrimaryKey;
 import androidx.room.Entity;
 
@@ -10,6 +12,7 @@ import androidx.room.Entity;
 
 public class Profile implements Parcelable {
     @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "profileId")
     private int id;
     private String nama;
     private String email;
@@ -25,6 +28,7 @@ public class Profile implements Parcelable {
     }
 
     protected Profile(Parcel in) {
+        id = in.readInt();
         nama = in.readString();
         email = in.readString();
         image = in.readString();
@@ -66,15 +70,24 @@ public class Profile implements Parcelable {
         this.image = image;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public int describeContents() {
         return 0;
     }
 
     @Override
-    public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(nama);
-        parcel.writeString(email);
-        parcel.writeString(image);
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(id);
+        dest.writeString(nama);
+        dest.writeString(email);
+        dest.writeString(image);
     }
 }
