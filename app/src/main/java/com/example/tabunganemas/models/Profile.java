@@ -3,7 +3,14 @@ package com.example.tabunganemas.models;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import androidx.room.PrimaryKey;
+import androidx.room.Entity;
+
+@Entity(tableName = "profile")
+
 public class Profile implements Parcelable {
+    @PrimaryKey(autoGenerate = true)
+    private int id;
     private String nama;
     private String email;
     private String image;
