@@ -1,4 +1,4 @@
-package com.example.tabunganemas.Dao;
+package id.putraprima.mygoldtracker.Dao;
 
 import android.view.View;
 
@@ -9,7 +9,7 @@ import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import com.example.tabunganemas.models.Profile;
+import id.putraprima.mygoldtracker.models.Profile;
 
 @Dao
 public interface ProfileDao {

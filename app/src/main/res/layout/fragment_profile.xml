@@ -6,16 +6,16 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.tabunganemas.screens.profile.ProfileViewModel" />
+            type="id.putraprima.mygoldtracker.screen.profile.ProfileViewModel" />
         <variable
             name="profile"
-            type="com.example.tabunganemas.models.Profile" />
+            type="id.putraprima.mygoldtracker.models.Profile" />
     </data>
 
     <com.google.android.material.navigation.NavigationView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".screens.profile.ProfilFragment">
+        tools:context=".screen.profile.ProfileFragment">
 
         <ImageView
             android:id="@+id/imgMenu"

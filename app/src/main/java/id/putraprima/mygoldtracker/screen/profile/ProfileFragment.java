@@ -1,4 +1,4 @@
-package com.example.tabunganemas.screens.profile;
+package id.putraprima.mygoldtracker.screen.profile;
 
 import android.os.Bundle;
 
@@ -15,25 +15,29 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.tabunganemas.R;
-import com.example.tabunganemas.models.Profile;
+import id.putraprima.mygoldtracker.R;
+import id.putraprima.mygoldtracker.databinding.FragmentProfileBinding;
+import id.putraprima.mygoldtracker.models.Profile;
 
-public class ProfilFragment extends Fragment {
+public class ProfileFragment extends Fragment {
 
     private FragmentProfileBinding binding;
     private ProfileViewModel viewModel;
 
-    public ProfilFragment() {
+    public ProfileFragment() {
         // Required empty public constructor
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profil, container, false);
-
-        binding = DataBindingUtil.inflate(inflater,R.layout.fragment_profil, container, false);
+        binding = DataBindingUtil.inflate(inflater,R.layout.fragment_profile, container, false);
         ProfileViewModelFactory profileViewModelFactory = new ProfileViewModelFactory(requireActivity().getApplication());
         viewModel = new ViewModelProvider(this,profileViewModelFactory).get(ProfileViewModel.class);
         binding.setViewModel(viewModel);
@@ -48,7 +52,7 @@ public class ProfilFragment extends Fragment {
             @Override
             public void onChanged(Profile profile) {
                 if(profile!=null){
-                    NavDirections action = ProfileFragmentDirections.actionProfileFragmentToPorfolioFragment();
+                    NavDirections action = ProfileFragmentDirections.actionProfileFragmentToHomeFragment(profile);
                     Navigation.findNavController(requireView()).navigate(action);
                 }
             }

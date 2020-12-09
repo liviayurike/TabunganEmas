@@ -1,4 +1,4 @@
-package com.example.tabunganemas.database;
+package id.putraprima.mygoldtracker.database;
 
 import android.content.Context;
 
@@ -11,8 +11,8 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.Executors;
 
-import com.example.tabunganemas.Dao.ProfileDao;
-import com.example.tabunganemas.models.Profile;
+import id.putraprima.mygoldtracker.Dao.ProfileDao;
+import id.putraprima.mygoldtracker.models.Profile;
 
 @Database(entities = {Profile.class},version = 1,exportSchema = false)
 

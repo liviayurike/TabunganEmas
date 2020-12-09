@@ -3,21 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/portofolioFragment">
+    app:startDestination="@id/homeFragment">
 
     <fragment
-        android:id="@+id/portofolioFragment"
-        android:name="com.example.tabunganemas.screens.portofolio.PortofolioFragment"
-        android:label="fragment_portofolio"
-        tools:layout="@layout/fragment_portofolio" />
-    <fragment
-        android:id="@+id/profilFragment"
-        android:name="com.example.tabunganemas.screens.profile.ProfilFragment"
-        android:label="fragment_profil"
-        tools:layout="@layout/fragment_profil" >
+        android:id="@+id/homeFragment"
+        android:name="id.putraprima.mygoldtracker.screen.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <argument
+            android:name="profile"
+            app:argType="id.putraprima.mygoldtracker.models.Profile" />
         <action
-            android:id="@+id/action_profileFragment_to_porfolioFragment"
-            app:destination="@id/portofolioFragment" />
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="id.putraprima.mygoldtracker.screen.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
         <argument
             android:name="profile"
             app:argType="id.putraprima.mygoldtracker.models.Profile" />

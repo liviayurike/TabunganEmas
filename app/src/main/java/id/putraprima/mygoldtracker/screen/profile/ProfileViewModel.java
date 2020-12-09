@@ -1,4 +1,4 @@
-package com.example.tabunganemas.screens.profile;
+package id.putraprima.mygoldtracker.screen.profile;
 
 import android.app.Application;
 
@@ -6,8 +6,8 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.example.tabunganemas.models.Profile;
-import com.example.tabunganemas.repository.RepositoryProfile;
+import id.putraprima.mygoldtracker.models.Profile;
+import id.putraprima.mygoldtracker.repository.RepositoryProfile;
 
 public class ProfileViewModel extends ViewModel {
 

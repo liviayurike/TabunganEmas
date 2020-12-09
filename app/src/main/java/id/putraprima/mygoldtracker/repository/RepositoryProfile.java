@@ -1,4 +1,4 @@
-package com.example.tabunganemas.repository;
+package id.putraprima.mygoldtracker.repository;
 
 import android.app.Application;
 import android.app.AsyncNotedAppOp;
@@ -7,9 +7,9 @@ import android.os.AsyncTask;
 import androidx.lifecycle.LiveData;
 import androidx.loader.content.AsyncTaskLoader;
 
-import com.example.tabunganemas.Dao.ProfileDao;
-import com.example.tabunganemas.database.EmasDB;
-import com.example.tabunganemas.models.Profile;
+import id.putraprima.mygoldtracker.Dao.ProfileDao;
+import id.putraprima.mygoldtracker.database.EmasDB;
+import id.putraprima.mygoldtracker.models.Profile;
 
 public class RepositoryProfile {
     private ProfileDao profileDao;
